@@ -1,8 +1,8 @@
 package Repository;
 
-import Service.PetService;
+import Model.Pet;
 
 public interface PetRepository {
 
-    void cadastrar();
+    void cadastrar(Pet pet);
 }

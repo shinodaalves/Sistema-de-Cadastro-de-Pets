@@ -21,6 +21,6 @@ public class PetService {
         pet.setIdade(idade);
         pet.setPeso(peso);
         pet.setRaca(raca);
-        System.out.println(pet);
+        petRepository.cadastrar(pet);
     }
 }

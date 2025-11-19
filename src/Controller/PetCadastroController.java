@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Pet;
 import Model.Sexo;
 import Model.Tipo;
 import Service.PetService;
