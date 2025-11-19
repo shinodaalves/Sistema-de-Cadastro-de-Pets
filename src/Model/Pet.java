@@ -7,8 +7,8 @@ public class Pet {
     private Tipo TIPO;
     private Sexo sexo;
     private String endereco;
-    private double idade;
-    private double peso;
+    private int idade;
+    private int peso;
     private String raca;
     private LocalDateTime dataCadastro;
 
@@ -48,19 +48,19 @@ public class Pet {
         this.endereco = endereco;
     }
 
-    public double getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setIdade(double idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 
-    public double getPeso() {
+    public int getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public void setPeso(int peso) {
         this.peso = peso;
     }
 

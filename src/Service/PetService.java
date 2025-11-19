@@ -12,7 +12,7 @@ public class PetService {
         this.petRepository = petRepository;
     }
 
-    public void cadastrarPet(String nome, Tipo TIPO, Sexo sexo, String endereco, double idade, double peso, String raca) {
+    public void cadastrarPet(String nome, Tipo TIPO, Sexo sexo, String endereco, int idade, int peso, String raca) {
         Pet pet = new Pet();
         pet.setNome(nome);
         pet.setTIPO(TIPO);

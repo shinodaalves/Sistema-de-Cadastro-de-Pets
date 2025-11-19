@@ -1,6 +1,5 @@
 package Controller;
 
-import Model.Pet;
 import Model.Sexo;
 import Model.Tipo;
 import Service.PetService;
@@ -23,8 +22,8 @@ public class PetCadastroController {
         Tipo tipo = Tipo.valueOf(respostas[1].toUpperCase());
         Sexo sexo = Sexo.valueOf(respostas[2].toUpperCase());
         String endereco = respostas[3];
-        double idade = Double.parseDouble(respostas[4]);
-        double peso = Double.parseDouble(respostas[5]);
+        int idade = Integer.parseInt(respostas[4]);
+        int peso = Integer.parseInt(respostas[5]);
         String raca = respostas[6];
         for (String resposta : respostas) {
             System.out.println(resposta);
