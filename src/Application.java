@@ -1,10 +1,11 @@
 import Controller.*;
 import Repository.PetRepository;
+import Repository.txtPetRepository;
 import Service.PetService;
 
 public class Application {
     public static void main(String[] args) {
-        PetRepository petRepository = new PetRepository();
+        PetRepository petRepository = new txtPetRepository();
         PetService petService = new PetService(petRepository);
 
         FormularioController formulario = new FormularioController();
@@ -15,5 +16,6 @@ public class Application {
 
         MenuPrincipalController MenuPrincipal = new MenuPrincipalController(cadastro, busca, alteracao, remocao);
         MenuPrincipal.iniciar();
+
     }
 }

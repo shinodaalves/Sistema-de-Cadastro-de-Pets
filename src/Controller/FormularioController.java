@@ -24,15 +24,10 @@ public class FormularioController {
                     continue;
                 }
 
-                String valorValido = null;
-                String resposta = null;
-                while (valorValido == null) {
                 perguntas[i] = linha;
                     System.out.println(perguntas[i]);
                     System.out.print("Resposta: ");
-                    resposta = sc.nextLine();
-                }
-                respostas [i] = resposta;
+                    respostas [i] = sc.nextLine();
                 System.out.println("\n-----------------------------------------\n");
                 i++;
             }

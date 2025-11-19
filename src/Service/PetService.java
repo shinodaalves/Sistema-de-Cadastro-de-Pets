@@ -6,7 +6,7 @@ import Model.Tipo;
 import Repository.PetRepository;
 
 public class PetService {
-    private final PetRepository petRepository;
+    private PetRepository petRepository;
 
     public PetService(PetRepository petRepository) {
         this.petRepository = petRepository;
@@ -21,5 +21,6 @@ public class PetService {
         pet.setIdade(idade);
         pet.setPeso(peso);
         pet.setRaca(raca);
+        System.out.println(pet);
     }
 }

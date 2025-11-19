@@ -1,6 +1,5 @@
 package Controller;
 
-import Repository.PetRepository;
 import Service.PetService;
 
 public class PetRemocaoController {

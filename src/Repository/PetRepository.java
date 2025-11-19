@@ -1,4 +1,8 @@
 package Repository;
 
-public class PetRepository {
+import Service.PetService;
+
+public interface PetRepository {
+
+    void cadastrar();
 }

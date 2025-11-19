@@ -75,6 +75,20 @@ public class Pet {
     public LocalDateTime getDataCadastro() {
         return dataCadastro;
     }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "nome='" + nome + '\'' +
+                ", TIPO=" + TIPO +
+                ", sexo=" + sexo +
+                ", endereco='" + endereco + '\'' +
+                ", idade=" + idade +
+                ", peso=" + peso +
+                ", raca='" + raca + '\'' +
+                ", dataCadastro=" + dataCadastro +
+                '}';
+    }
 }
 
 
