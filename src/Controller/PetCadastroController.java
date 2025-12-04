@@ -16,8 +16,8 @@ public class PetCadastroController {
     }
 
     public void cadastrarPet(Scanner sc) {
-        String[] respostas = formularioController.lerFormulario(sc);
-        respostas = formularioController.respostas;
+        String[] respostas = formularioController.lerRespostas(sc);
+
         String nome = respostas[0];
         Tipo tipo = Tipo.valueOf(respostas[1].toUpperCase());
         Sexo sexo = Sexo.valueOf(respostas[2].toUpperCase());
@@ -25,9 +25,6 @@ public class PetCadastroController {
         int idade = Integer.parseInt(respostas[4]);
         int peso = Integer.parseInt(respostas[5]);
         String raca = respostas[6];
-        for (String resposta : respostas) {
-            System.out.println(resposta);
-        }
 
         petService.cadastrarPet(nome, tipo, sexo, endereco, idade, peso, raca);
 

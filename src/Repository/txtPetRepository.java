@@ -12,9 +12,6 @@ public class txtPetRepository implements PetRepository {
     public txtPetRepository() {
     }
 
-    public txtPetRepository(PetService petService) {
-        this.petService = petService;
-    }
 
     @Override
     public void cadastrar(Pet pet) {
@@ -23,9 +20,9 @@ public class txtPetRepository implements PetRepository {
         String[] petArray = new String[7];
         String nomeFormatado = pet.getNome().replace(" ", "").toUpperCase();
         String horaCadastro = pet.getDataCadastro().format(formatter);
-        String nomeArquivo = horaCadastro + "-" + nomeFormatado + ".txt";
         String idadeFormatado = pet.getIdade() + " anos";
         String pesoFormatado = pet.getPeso() + "kg";
+        String nomeArquivo = horaCadastro + "-" + nomeFormatado + ".txt";
         petArray[0] = pet.getNome();
         petArray[1] = String.valueOf(pet.getTIPO());
         petArray[2] = String.valueOf(pet.getSexo());
@@ -40,7 +37,7 @@ public class txtPetRepository implements PetRepository {
                 bw.write(aux++ + " - " + s);
                 bw.newLine();
             }
-            System.out.println("Pet Cadastrado Com Sucesso!");
+            System.out.println("\nPet Cadastrado Com Sucesso!");
         } catch (IOException e) {
             e.printStackTrace();
         }
