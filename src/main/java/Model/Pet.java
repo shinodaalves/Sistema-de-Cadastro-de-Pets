@@ -3,6 +3,7 @@ package Model;
 import java.time.LocalDateTime;
 
 public class Pet {
+    private Integer id;
     private String nome;
     private Tipo TIPO;
     private Sexo sexo;
@@ -14,6 +15,14 @@ public class Pet {
 
     public Pet() {
         this.dataCadastro = LocalDateTime.now();
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {

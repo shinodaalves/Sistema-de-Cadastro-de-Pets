@@ -6,12 +6,7 @@ import Service.PetService;
 import java.io.*;
 import java.time.format.DateTimeFormatter;
 
-public class txtPetRepository implements PetRepository {
-    PetService petService;
-
-    public txtPetRepository() {
-    }
-
+public class TxtPetRepository implements PetRepository {
 
     @Override
     public void cadastrar(Pet pet) {
@@ -42,4 +37,17 @@ public class txtPetRepository implements PetRepository {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void deletar() {
+        File file = new File("src/Data/pets/");
+        try {
+            file.delete();
+            System.out.println("\nPet Deletado Com Sucesso!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
