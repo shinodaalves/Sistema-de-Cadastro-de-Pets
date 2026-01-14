@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_petshop
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: petshop
+    ports:
+      - "3306:3306"
+    volumes:
+      # Mapeamento inicial do sql:
+      # O arquivo init.sql na sua pasta atual será copiado para dentro do container e executado automaticamente no primeiro boot do banco de dados
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      # Persistência dos dados do MySQL
+      - petshop_db_data:/var/lib/mysql
+
+volumes:
+  petshop_db_data:
