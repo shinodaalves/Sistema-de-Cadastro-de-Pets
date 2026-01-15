@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Application {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         PetRepository petRepository = PetRepositoryFactory.escolherPeloConsole(sc);
         PetService petService = new PetService(petRepository);
 
